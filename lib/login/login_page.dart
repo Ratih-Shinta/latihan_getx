@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_exercise/login_page_controller.dart';
+import 'package:flutter_login_exercise/login/login_page_controller.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
@@ -44,13 +44,12 @@ class LoginPage extends StatelessWidget {
                       ),
                       ElevatedButton(
                           onPressed: () {
-                            controller.LoginUser();
+                            controller.loginUser();
                           },
                           child: Text("Login"))
                     ],
                   ),
                 ),
-        )
-      );
+        ));
   }
 }
