@@ -16,14 +16,15 @@ class ProductController extends GetxController {
 
   void fetchProduct() async {
     try {
-    final response = await http.get(Uri.parse(
-        'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline'));
-    if (response.statusCode == 200) {
-      productresponsemodel.value = productResponseModelFromJson(response.body);
-          isLoading(true).obs;
-    } else {
-      print('error: ${response.statusCode}');
-    }
+      final response = await http.get(Uri.parse(
+          'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline'));
+      if (response.statusCode == 200) {
+        productresponsemodel.value =
+            productResponseModelFromJson(response.body);
+        isLoading(true).obs;
+      } else {
+        print('error: ${response.statusCode}');
+      }
     } catch (e) {
       print(e);
     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_exercise/makeup_api/makeup_home.dart';
+import 'package:flutter_login_exercise/pak_aji/splash_screen/splash_screen_view.dart';
 import 'package:get/get.dart';
 import 'login/login_page.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MakeupHomePage(),
+      home: SplashScreenPage(),
     );
   }
 }
